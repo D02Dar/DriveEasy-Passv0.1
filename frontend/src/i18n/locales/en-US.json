@@ -284,7 +284,7 @@
 "subcategories": "Subcategories",
 "practiceCountSuffix": " practices",
 "bookmarkReview": "Bookmark Review",
-"reviewBookmarkedQuestions": "Review your bookmarked important questions",
+"reviewBookmarkedQuestions": "Review your important bookmarked questions and consolidate knowledge",
 "startReview": "Start Review",
 "practiceSettings": "Practice Settings",
 "questionCountOptions": {
@@ -313,7 +313,19 @@
 "tryOtherConditions": "Please try other search conditions",
 "bookmarkDescription": "Bookmark important questions during practice for later review",
 "bookmarkTime": "Bookmark Time",
-"answerAnalysis": "Answer Analysis"
+"answerAnalysis": "Answer Analysis",
+"failedTitle": "Failed",
+"failedSubtitle": "Unfortunately, you did not pass this practice. Please keep trying!",
+"passedTitle": "Passed",
+"passedSubtitle": "Congratulations! You passed this practice. Keep it up!",
+"finalScore": "Final Score",
+"correctCount": "Correct Answers",
+"totalCount": "Total Questions",
+"reviewAnswers": "Review Answers",
+"restartPractice": "Restart Practice",
+"backToList": "Back to List",
+"completePractice": "Complete Practice",
+"questionNumber": "Question {number}"
 },
 "profile": {
 "title": "Profile",

@@ -6,18 +6,18 @@
         <div class="title-section">
           <h1 class="page-title">
             <el-icon><Star /></el-icon>
-            收藏题目
+            {{ t('practice.bookmarkedQuestions') }}
           </h1>
-          <p class="page-subtitle">复习您收藏的重要题目，巩固知识点</p>
+          <p class="page-subtitle">{{ t('practice.reviewBookmarkedQuestions') }}</p>
         </div>
         <div class="header-actions">
           <el-button @click="startBookmarkPractice" type="primary">
             <el-icon><Reading /></el-icon>
-            开始复习
+            {{ t('practice.startReview') }}
           </el-button>
           <el-button @click="goBack">
             <el-icon><ArrowLeft /></el-icon>
-            返回练习
+            {{ t('practice.backToPractice') }}
           </el-button>
         </div>
       </div>
@@ -31,7 +31,7 @@
         </div>
         <div class="stat-content">
           <div class="stat-value">{{ totalBookmarks }}</div>
-          <div class="stat-label">收藏题目</div>
+          <div class="stat-label">{{ t('practice.bookmarkedQuestions') }}</div>
         </div>
       </div>
       <div class="stat-card">
@@ -40,7 +40,7 @@
         </div>
         <div class="stat-content">
           <div class="stat-value">{{ categoryCount }}</div>
-          <div class="stat-label">涉及分类</div>
+          <div class="stat-label">{{ t('practice.category') }}</div>
         </div>
       </div>
     </div>
@@ -59,7 +59,7 @@
           />
           <el-select
             v-model="selectedCategory"
-            placeholder="选择分类"
+            :placeholder="t('practice.category')"
             clearable
             @change="handleCategoryChange"
             style="width: 200px"
@@ -71,7 +71,7 @@
               :value="category"
             />
           </el-select>
-          <el-button @click="clearFilters">清除筛选</el-button>
+          <el-button @click="clearFilters">{{ t('common.clearFilters') }}</el-button>
         </div>
       </div>
     </div>
@@ -87,7 +87,7 @@
       <h3>{{ searchKeyword || selectedCategory ? t('practice.noQuestionsFound') : t('practice.noBookmarks') }}</h3>
       <p>{{ searchKeyword || selectedCategory ? t('practice.tryOtherConditions') : t('practice.bookmarkDescription') }}</p>
       <el-button type="primary" @click="goToPractice">
-        去练习题目
+        {{ t('practice.goPractice') }}
       </el-button>
     </div>
 
@@ -100,7 +100,7 @@
           class="question-card"
         >
           <div class="question-header">
-            <div class="question-number">第 {{ (currentPage - 1) * pageSize + index + 1 }} 题</div>
+            <div class="question-number">{{ t('practice.questionNumber', { number: (currentPage - 1) * pageSize + index + 1 }) }}</div>
             <div class="question-category">{{ question.categoryName }}</div>
             <div class="question-actions">
               <el-button
@@ -109,7 +109,7 @@
                 type="warning"
               >
                 <el-icon><Star /></el-icon>
-                取消收藏
+                {{ t('practice.unbookmark') }}
               </el-button>
             </div>
           </div>
@@ -144,7 +144,7 @@
           <div class="question-footer">
             <div class="question-info">
               <span class="bookmark-time">
-                收藏时间: {{ formatDate(question.bookmarkedAt) }}
+                {{ t('practice.bookmarkTime') }}: {{ formatDate(question.bookmarkedAt) }}
               </span>
             </div>
             <div class="question-controls">
@@ -160,7 +160,7 @@
           <!-- 答案解析 -->
           <div v-if="showAnswers[question.id]" class="explanation-section">
             <div v-if="question.explanation" class="explanation-content">
-              <h4 class="explanation-title">答案解析</h4>
+              <h4 class="explanation-title">{{ t('practice.answerExplanation') }}</h4>
               <p class="explanation-text">{{ question.explanation }}</p>
             </div>
             <div v-if="question.correctAnswerText" class="explanation-detail">

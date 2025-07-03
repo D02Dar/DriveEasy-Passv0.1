@@ -284,7 +284,7 @@
 "subcategories": "子分类",
 "practiceCountSuffix": "次练习",
 "bookmarkReview": "收藏题目复习",
-"reviewBookmarkedQuestions": "复习您收藏的重要题目",
+"reviewBookmarkedQuestions": "复习您收藏的重要题目，巩固知识点",
 "startReview": "开始复习",
 "practiceSettings": "练习设置",
 "questionCountOptions": {
@@ -313,7 +313,19 @@
 "tryOtherConditions": "请尝试其他搜索条件",
 "bookmarkDescription": "在练习过程中收藏重要题目，方便后续复习",
 "bookmarkTime": "收藏时间",
-"answerAnalysis": "答案解析"
+"answerAnalysis": "答案解析",
+"failedTitle": "未通过",
+"failedSubtitle": "很遗憾，您未能通过本次练习，请继续努力！",
+"passedTitle": "恭喜通过",
+"passedSubtitle": "恭喜您通过本次练习，继续保持！",
+"finalScore": "最终得分",
+"correctCount": "答对题数",
+"totalCount": "总题数",
+"reviewAnswers": "查看答案",
+"restartPractice": "重新练习",
+"backToList": "返回列表",
+"completePractice": "完成练习",
+"questionNumber": "第 {number} 题"
 },
 "profile": {
 "title": "个人资料",
